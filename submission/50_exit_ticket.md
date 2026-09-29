@@ -4,8 +4,8 @@
 đã nằm trong file tương ứng nên không hỏi lại ở đây.
 
 1. Một vật ở vùng seam giữa hai camera thật xuất hiện với hai box khác nhau: đó là lỗi `DUPLICATE` hay cần một quy
-   tắc riêng? Vì sao? TODO
+   tắc riêng? Vì sao? Không nên tự động tính là `DUPLICATE`: trong hệ bốn camera, một vật ở seam có thể hợp lệ xuất hiện đồng thời bằng hai box trong hai image space khác nhau. Cần quy tắc cross-camera riêng xác định đầu ra mong muốn (giữ cả hai hay hợp nhất), camera ưu tiên, timestamp và calibration/transform. Chỉ gọi duplicate khi policy đó nói hai annotation cùng output là dư thừa và bằng chứng identity xác nhận chúng là cùng vật.
 2. Một vật đi qua nhiều frame trên cùng camera: khi nào giữ cùng track ID, khi nào thêm keyframe hoặc trạng thái
-   Outside? Nêu bằng chứng sẽ cần trước khi nối track qua hai camera. TODO
+   Outside? Nêu bằng chứng sẽ cần trước khi nối track qua hai camera. Trên cùng camera, giữ track ID khi chuỗi frame cho thấy cùng identity còn quan sát được; thêm keyframe khi vị trí, kích thước, hình học, occlusion/truncation hoặc attribute thay đổi đủ để nội suy cũ không còn đúng. Đánh dấu `Outside` tại frame đầu vật rời trường nhìn theo guideline task, thay vì kéo box qua vùng không còn thấy. Trước khi nối qua hai camera cần timestamp đồng bộ, calibration/biến đổi giữa camera, vùng chồng thực, chuỗi frame lân cận và dấu hiệu nhận dạng/class nhất quán, đồng thời phải có policy cho track cross-camera; chỉ giống vị trí ở hai mép ảnh là chưa đủ.
 3. Nhìn lại cả buổi: một chỗ bạn tin nhãn mình đúng nhưng reference hoặc người soát nghĩ khác (dẫn frame/`object_ref`),
-   bạn đã xử lý thế nào, và nếu làm lại slice này bạn sẽ đổi gì trong cách làm? TODO
+   bạn đã xử lý thế nào, và nếu làm lại slice này bạn sẽ đổi gì trong cách làm? Ở `adasind_258420.jpg`, ban đầu tôi đã bỏ qua Pedestrian nhỏ tại `R7+M12` vì vùng này sát Pedestrian L8 và dễ nhìn thành một cụm; reference và model lại cùng chỉ ra một người riêng cao khoảng 51 px. Tôi không giữ nhãn chỉ vì cảm giác ban đầu: đối chiếu ảnh gốc với R01, ghi `E1_annotator_error`, rồi bản rework `43D4-7709` đã thêm box tại x≈92–109, y≈792–843. Nếu làm lại slice, tôi sẽ zoom và đếm từng silhouette riêng quanh các cụm người/xe, kiểm chiều cao ≥40 px trước khi khóa, rồi mới chuyển sang soát class và attribute.

@@ -151,24 +151,29 @@
       "sha256": "594910150d17da596d1709fa4b222c0c02b69623570acf5fa7c5c61471a86c58"
     },
     {
+      "file": "10_error_card.md",
+      "lines": 29,
+      "sha256": "da8b6b03769e2c99e18f323ce41ffdb9a5cad2a5383e7b6547f17c5d9597c70d"
+    },
+    {
       "file": "20_guideline_patch.md",
       "lines": 7,
-      "sha256": "6ed6f6b0bbe96bbc3cfadb11d8cad28a3875d2f517cdc300552b5b9e4cf81005"
+      "sha256": "3f86febe3034fd7297af767c0d162a4ed0caa1817552603708253988931c471b"
     },
     {
       "file": "30_escalation_ticket.md",
       "lines": 9,
-      "sha256": "94c15fab6fa07d04911253a28db098d3259c358b9e9b698a0d8051cb6f553243"
+      "sha256": "17a67c0dd252f83290bec037583e9d1e90dc78994b3a074a2eee692fee5a6fb0"
     },
     {
       "file": "40_decision_log.csv",
-      "lines": 5,
-      "sha256": "4b23a72f2f59161a8af7e15f48399be3a8f6b2e36dcb2d59485a272996a13f45"
+      "lines": 6,
+      "sha256": "fa580f39eb368d995a6ecacfff12960fb09fcb6e4a5236cab325e711664aebdf"
     },
     {
       "file": "45_review_plan.md",
       "lines": 16,
-      "sha256": "2e17b6e20245302692a71b1778393d8ce6e43fb4b40e774e1b1281cf4a37dae4"
+      "sha256": "87ba6c59ef4dbe9c4e4e1b427ffabdc7b5f02fa0f3accb439f8326d01b41c4fc"
     },
     {
       "file": "45_sampling_plan.csv",
@@ -183,15 +188,8 @@
     {
       "file": "50_exit_ticket.md",
       "lines": 11,
-      "sha256": "455a64f9ffef79d6da339ad4272a3c912e9ac0a02bebb077dacd193dbf35228f"
+      "sha256": "338f8e4fd31c4524385092d92f2deae5453f2774105bfb07afca8d6678860b75"
     }
   ],
-  "failed_gates": [
-    "Thiếu file 10_error_card.md (chạy python3 lab11.py card)",
-    "Còn TODO trong 20_guideline_patch.md",
-    "Còn TODO trong 30_escalation_ticket.md",
-    "Còn TODO trong 45_review_plan.md",
-    "Còn TODO trong 50_exit_ticket.md",
-    "screenshots cần ≥2 ảnh"
-  ]
+  "failed_gates": []
 }
