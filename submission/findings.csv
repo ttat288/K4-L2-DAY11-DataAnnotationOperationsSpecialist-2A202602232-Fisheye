@@ -1,10 +1,20 @@
 round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
-r1_craft,B4-dense,adasind_258420.jpg,L2,na,SPURIOUS,,,,,,,,
-r1_craft,B4-dense,adasind_258420.jpg,L4,na,SPURIOUS,,,,,,,,
-r1_craft,B4-dense,adasind_258420.jpg,L5+R8,na,BOX_GEOMETRY,,,,,,,,
-r1_craft,B4-dense,adasind_258420.jpg,L6,na,SPURIOUS,,,,,,,,
-r1_craft,B4-dense,adasind_258420.jpg,R7,na,MISSING,,,,,,,,
-r1_craft,B4-dense,adasind_270517.jpg,L7,na,SPURIOUS,,,,,,,,
+r1_craft,B4-dense,adasind_258420.jpg,L2,L_only,SPURIOUS,E1_annotator_error,P1,annotator,R01,"L2 Bike (x=173–199,y=799–847) không có vật hai bánh tách biệt tương ứng trong ảnh/reference/model; vùng này nằm giữa hai Bike lân cận.",rework,v1.0.0,"Xóa box thừa."
+r1_craft,B4-dense,adasind_258420.jpg,L4,L_only,SPURIOUS,E1_annotator_error,P1,annotator,R04,"L4 Bike (x=273–307,y=787–922) phủ một phần ThreeWheeler L9/R4; ảnh không cho thấy xe hai bánh riêng.",rework,v1.0.0,"Cùng ca QA duplicate."
+r1_craft,B4-dense,adasind_258420.jpg,L5+R8,LR_noM,BOX_GEOMETRY,E1_annotator_error,P1,annotator,R02,"L5 ThreeWheeler chỉ ôm x=618–752 trong khi R8 bao toàn vật x=608–839; phần còn lại bị tách sai thành L6.",rework,v1.0.0,"Nới L5 theo phần nhìn thấy và không tách một vật thành hai box."
+r1_craft,B4-dense,adasind_258420.jpg,L6,L_only,SPURIOUS,E1_annotator_error,P1,annotator,R04,"L6 ThreeWheeler (x=741–834,y=779–974) là phần bên phải của cùng ThreeWheeler L5/R8, không phải vật độc lập.",rework,v1.0.0,"Xóa L6 sau khi sửa hình học L5."
+r1_craft,B4-dense,adasind_258420.jpg,R7+M12,RM_noL,MISSING,E1_annotator_error,P1,annotator,R01,"R7/M12 cùng chỉ người đi bộ x≈92–110,y≈792–844, cao khoảng 51 px ≥ H=40 nhưng L bỏ sót.",rework,v1.0.0,"Thêm box Pedestrian theo phần nhìn thấy."
+r1_craft,B4-dense,adasind_270517.jpg,L7,L_only,SPURIOUS,E1_annotator_error,P1,annotator,R03,"L7 Pedestrian (x=793–826,y=816–898) nằm trên gương/thân ThreeWheeler L6; không có người đi bộ độc lập.",rework,v1.0.0,"Xóa box Pedestrian thừa."
 r2_qa,B4-dense,adasind_258420.jpg,L4,L_only,DUPLICATE,,P1,qa,R04,"L4 Bike (x=273–307,y=787–922) phủ phần xe ba bánh đã có box L9 ThreeWheeler; không thấy xe hai bánh riêng tại vùng này.",rework,v1.0.0,QA code 64CD-240D
 r2_qa,B4-dense,adasind_258420.jpg,"missing@92,792",R_only,MISSING,,P1,qa,R01,"Người đi bộ riêng khoảng x=92–109,y=792–843 cao xấp xỉ 51 px, vượt H=40 nhưng không có box trong L.",rework,v1.0.0,QA code 64CD-240D
 r2_qa,B4-dense,adasind_270517.jpg,L7,L_only,SPURIOUS,,P1,qa,R03,"Box Pedestrian L7 (x=793–826,y=816–898) nằm trên gương/thân ThreeWheeler L6; không thấy người đi bộ độc lập.",rework,v1.0.0,QA code 64CD-240D
+calib,C0,adasind_019560.jpg,L3,na,SPURIOUS,E1_annotator_error,P1,annotator,R04,"L3 Bike (x=326–358,y=782–840) nằm trong vùng của ThreeWheeler R5; ảnh không cho thấy Bike tách biệt tại đây.",rework,v1.0.0,"Lỗi hiệu chuẩn C0: box thừa trên một phần xe ba bánh."
+calib,C0,adasind_019560.jpg,L6,na,SPURIOUS,E1_annotator_error,P1,annotator,R03,"L6 Bike (x=594–632,y=782–842) phủ một phần cùng rider+xe đã được bao bởi Bike L7/R1, không phải Bike độc lập.",rework,v1.0.0,"Lỗi hiệu chuẩn C0: tách/nhân đôi cùng một Bike."
+r3_diag,B4-dense,adasind_258420.jpg,R7+M12,RM_noL,MISSING,E1_annotator_error,P1,annotator,R01,"Reference R7 và model M12 cùng định vị Pedestrian x≈92–110,y≈792–844; kiểm ảnh xác nhận vật cao khoảng 51 px nhưng L thiếu.",rework,v1.0.0,"Bằng chứng đồng thuận R+M và ảnh gốc."
+r3_diag,B4-dense,adasind_258420.jpg,M4,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R04,"M4 gán Truck tại x=8–69,y=798–874, trùng ThreeWheeler L7/R1 ở zone edge; L và R đồng thuận class ThreeWheeler.",escalate,v1.0.0,"Ca edge dùng cho ticket model; kiểm thêm tập fisheye trước khi đổi model."
+r3_diag,B4-dense,adasind_258420.jpg,M8,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R04,"M8 gán Truck x=285–455,y=762–946 lên đúng vùng ThreeWheeler L9/R4; đây là dự đoán sai class chứ không phải vật mới.",keep_with_reason,v1.0.0,"Giữ nhãn L/R; gom bằng chứng sai class của model."
+r3_diag,B4-dense,adasind_258420.jpg,M11,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R04,"M11 gán Car x=610–837,y=778–975 lên ThreeWheeler R8; ảnh cho thấy auto-rickshaw và L đang tách hình học vật này thành L5/L6.",keep_with_reason,v1.0.0,"Không dùng M11 để hợp thức hóa việc tách box của L."
+r3_diag,B4-dense,adasind_270517.jpg,M6,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R04,"M6 gán Car x=170–269,y=736–883 lên ThreeWheeler L3/R4; ảnh và hai nguồn người cùng xác nhận xe ba bánh.",keep_with_reason,v1.0.0,"Mẫu sai class lặp lại ở frame thứ hai."
+r3_diag,B4-dense,adasind_270517.jpg,M9,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R04,"M9 gán Truck gần như cùng hình học với M6 trên ThreeWheeler L3/R4, tạo thêm một dự đoán đa-class cho cùng vật.",keep_with_reason,v1.0.0,"Không sửa nhãn người theo dự đoán chồng lặp."
+r3_diag,B4-dense,adasind_310008.jpg,M6,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R04,"M6 gán Truck x=254–365,y=828–971 lên ThreeWheeler L5/R1; L/R đồng thuận class và box ở zone mid.",keep_with_reason,v1.0.0,"Mẫu sai class lặp ở frame thứ ba."
+r3_diag,B4-dense,adasind_310008.jpg,M7,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R04,"M7 gán Bus gần như trùng hoàn toàn M6 và ThreeWheeler L5/R1, nên là dự đoán chồng sai class chứ không phải object mới.",keep_with_reason,v1.0.0,"Cần AI team đo confusion ThreeWheeler/Car/Truck/Bus trên tập lớn hơn."
