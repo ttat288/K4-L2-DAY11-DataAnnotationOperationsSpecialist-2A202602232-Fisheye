@@ -10,7 +10,7 @@
       <overlap>0</overlap>
       <bugtracker></bugtracker>
       <created>2026-09-29 03:19:23.868558+00:00</created>
-      <updated>2026-09-29 03:27:40.600773+00:00</updated>
+      <updated>2026-09-29 04:15:15.892692+00:00</updated>
       <subset>default</subset>
       <start_frame>0</start_frame>
       <stop_frame>2</stop_frame>
@@ -235,11 +235,16 @@ privacy_or_policy</values>
         </label>
       </labels>
     </task>
-    <dumped>2026-09-29 03:37:36.209453+00:00</dumped>
+    <dumped>2026-09-29 04:20:19.549284+00:00</dumped>
   </meta>
   <image id="0" name="adasind_258420.jpg" width="1080" height="1920">
     <box label="Pedestrian" source="auto" occluded="0" xtl="92.00" ytl="792.00" xbr="109.00" ybr="843.00" z_order="0">
       <attribute name="occluded">false</attribute>
+      <attribute name="truncated">false</attribute>
+      <attribute name="edge_zone">false</attribute>
+    </box>
+    <box label="ThreeWheeler" source="manual" occluded="1" xtl="608.00" ytl="778.00" xbr="839.00" ybr="975.00" z_order="0">
+      <attribute name="occluded">true</attribute>
       <attribute name="truncated">false</attribute>
       <attribute name="edge_zone">false</attribute>
     </box>
@@ -248,23 +253,8 @@ privacy_or_policy</values>
       <attribute name="truncated">false</attribute>
       <attribute name="edge_zone">false</attribute>
     </box>
-    <box label="Bike" source="manual" occluded="1" xtl="173.00" ytl="799.00" xbr="199.00" ybr="847.00" z_order="0">
-      <attribute name="occluded">true</attribute>
-      <attribute name="truncated">false</attribute>
-      <attribute name="edge_zone">false</attribute>
-    </box>
     <box label="Bike" source="manual" occluded="0" xtl="191.00" ytl="793.00" xbr="250.00" ybr="905.00" z_order="0">
       <attribute name="occluded">false</attribute>
-      <attribute name="truncated">false</attribute>
-      <attribute name="edge_zone">false</attribute>
-    </box>
-    <box label="ThreeWheeler" source="manual" occluded="1" xtl="618.00" ytl="780.00" xbr="752.00" ybr="945.00" z_order="0">
-      <attribute name="occluded">true</attribute>
-      <attribute name="truncated">false</attribute>
-      <attribute name="edge_zone">false</attribute>
-    </box>
-    <box label="ThreeWheeler" source="manual" occluded="1" xtl="741.00" ytl="779.00" xbr="834.00" ybr="974.00" z_order="0">
-      <attribute name="occluded">true</attribute>
       <attribute name="truncated">false</attribute>
       <attribute name="edge_zone">false</attribute>
     </box>

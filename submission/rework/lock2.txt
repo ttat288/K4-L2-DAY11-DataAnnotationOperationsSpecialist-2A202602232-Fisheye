@@ -1,9 +1,19 @@
 round: rework
 slice: B4-dense
-sha256: 43d47709235ec3423809b6d08a1adb475e44800630d4aeb3ed90414d6685acea
-code: 43D4-7709
-locked_at: 2026-09-29T10:37:38+07:00
-shapes: box=22, polygon=9
+sha256: 1a580d89f302f3ef39d4149e9c48a10bb5fce05f42e6c38b58e22f8c8b1da083
+code: 1A58-0D89
+locked_at: 2026-09-29T11:20:26+07:00
+shapes: box=20, polygon=9
 prefill_kept: 3
 prefill_edited: 1
-new: 18
+new: 16
+history:
+  round: rework
+  slice: B4-dense
+  sha256: 43d47709235ec3423809b6d08a1adb475e44800630d4aeb3ed90414d6685acea
+  code: 43D4-7709
+  locked_at: 2026-09-29T10:37:38+07:00
+  shapes: box=22, polygon=9
+  prefill_kept: 3
+  prefill_edited: 1
+  new: 18
