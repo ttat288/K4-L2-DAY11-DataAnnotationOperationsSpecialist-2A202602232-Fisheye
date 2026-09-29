@@ -1,1 +1,5 @@
 id,date,question,decision,rationale,status
+DL-01,2026-09-29,"K12 polygon có được thực hiện trong vòng này không?","Bỏ K12 và ghi degrade k12","Self-QC ghi chưa vẽ polygon K12; mode.json đã được cập nhật để phản ánh việc cắt giảm thay vì để trạng thái mâu thuẫn.",decided
+DL-02,2026-09-29,"Mô tả rig trong sensor context đến mức nào?","Chỉ ghi quan sát và đánh dấu suy luận","Ảnh có tay/tay lái và một phần người điều khiển ở mép trái nhưng không có tài liệu xác nhận vị trí lắp camera.",decided
+DL-03,2026-09-29,"Vì sao hash XML ở checkout khác hash lock?","Escalate ghi nhận lỗi CRLF khi checkout; khôi phục XML từ Git","CRLF trong working copy làm hash khác lock. Đã khôi phục submission/r1_craft/annotations.xml và submission/p1_calib/annotations.xml từ Git; hash r1_craft khớp 64CD-240D và lệnh QA đã chạy thành công.",escalated
+DL-04,2026-09-29,"Mở reference vào thời điểm nào?","Chỉ mở reference R1 sau khi QA hoàn tất","Đã chạy QA thành công với mã khóa 64CD-240D trước khi chạy reference r1_craft.",decided

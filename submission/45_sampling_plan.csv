@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,,TODO,TODO
-front,hard,,TODO,TODO
-rear,normal,,TODO,TODO
-rear,hard,,TODO,TODO
-left,normal,,TODO,TODO
-left,hard,,TODO,TODO
-right,normal,,TODO,TODO
-right,hard,,TODO,TODO
+front,normal,20,moderate,"Bao phủ giao thông thẳng, xe và người đi bộ ở vùng giữa ảnh; lấy mẫu theo cảnh và thời gian để tránh đếm các frame liên tiếp như ca độc lập."
+front,hard,30,high,"Ưu tiên xe cắt ngang, người đi bộ gần đầu xe, che khuất và vùng seam góc trước; hard được lấy nhiều hơn để tăng cơ hội bắt lỗi hiếm."
+rear,normal,20,moderate,"Bao phủ xe phía sau và người đi bộ trong điều kiện nhìn thường; phân tán theo chuyến và thời điểm."
+rear,hard,30,high,"Ưu tiên xe áp sát, vật nhỏ ở xa, lóa/thiếu sáng, che khuất và vật xuất hiện tại seam sau-góc."
+left,normal,20,moderate,"Bao phủ xe hai bánh, người đi bộ và vật ven đường trong vùng nhìn bên trái ở điều kiện thường."
+left,hard,30,high,"Ưu tiên xe hai bánh, người bị che, vật sát thân xe và vật đi qua seam trước-trái hoặc sau-trái."
+right,normal,20,moderate,"Bao phủ xe và người đi bộ ở vùng nhìn bên phải trong điều kiện thường; rải đều theo cảnh."
+right,hard,30,high,"Ưu tiên vật sát lề, xe đỗ/xe cắt ngang, vùng khuất và các trường hợp đi qua seam trước-phải hoặc sau-phải."

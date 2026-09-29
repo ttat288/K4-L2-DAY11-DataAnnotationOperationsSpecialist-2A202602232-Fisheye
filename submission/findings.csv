@@ -1,1 +1,10 @@
 round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
+r1_craft,B4-dense,adasind_258420.jpg,L2,na,SPURIOUS,,,,,,,,
+r1_craft,B4-dense,adasind_258420.jpg,L4,na,SPURIOUS,,,,,,,,
+r1_craft,B4-dense,adasind_258420.jpg,L5+R8,na,BOX_GEOMETRY,,,,,,,,
+r1_craft,B4-dense,adasind_258420.jpg,L6,na,SPURIOUS,,,,,,,,
+r1_craft,B4-dense,adasind_258420.jpg,R7,na,MISSING,,,,,,,,
+r1_craft,B4-dense,adasind_270517.jpg,L7,na,SPURIOUS,,,,,,,,
+r2_qa,B4-dense,adasind_258420.jpg,L4,L_only,DUPLICATE,,P1,qa,R04,"L4 Bike (x=273–307,y=787–922) phủ phần xe ba bánh đã có box L9 ThreeWheeler; không thấy xe hai bánh riêng tại vùng này.",rework,v1.0.0,QA code 64CD-240D
+r2_qa,B4-dense,adasind_258420.jpg,"missing@92,792",R_only,MISSING,,P1,qa,R01,"Người đi bộ riêng khoảng x=92–109,y=792–843 cao xấp xỉ 51 px, vượt H=40 nhưng không có box trong L.",rework,v1.0.0,QA code 64CD-240D
+r2_qa,B4-dense,adasind_270517.jpg,L7,L_only,SPURIOUS,,P1,qa,R03,"Box Pedestrian L7 (x=793–826,y=816–898) nằm trên gương/thân ThreeWheeler L6; không thấy người đi bộ độc lập.",rework,v1.0.0,QA code 64CD-240D
