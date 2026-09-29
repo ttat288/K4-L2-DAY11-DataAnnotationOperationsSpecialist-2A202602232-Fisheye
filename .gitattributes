@@ -1,0 +1,3 @@
+# Locked CVAT exports are verified by SHA-256; keep their bytes exactly as exported
+# (no LF/CRLF conversion on checkout, e.g. with core.autocrlf=true on Windows).
+submission/**/*.xml -text
